@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #0a0a2e 0%, #16213e 50%, #0f3460 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+#game-container {
+    position: relative;
+    width: 900px;
+    height: 700px;
+}
+
+#gameCanvas {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(100, 200, 255, 0.5);
+    background: linear-gradient(180deg, #0a0a2e 0%, #1a1a3e 100%);
+    display: block;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 46, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.screen.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(100, 200, 255, 0.8);
+    background: linear-gradient(45deg, #64b5f6, #ba68c8, #4fc3f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.instructions {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 2px solid rgba(100, 200, 255, 0.3);
+}
+
+.instructions p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #64b5f6, #ba68c8);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(100, 181, 246, 0.4);
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(100, 181, 246, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#final-score, #final-level {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
